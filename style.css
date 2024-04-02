@@ -1,0 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+  list-style: none;
+}
+
+html {
+  background-color: rgb(41, 41, 38);
+}
+html,
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-optical-sizing: auto;
+  color: rgb(224, 225, 174);
+  height: 100vh;
+  cursor: none;
+  background-image: linear-gradient(
+    to right bottom,
+    rgb(26, 26, 24),
+    rgb(41, 41, 38),
+    rgb(30, 30, 29)
+  );
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.cursor {
+  height: 5px;
+  width: 5px;
+  background-color: rgb(224, 235, 193);
+}
+
+.cursor-outline {
+  height: 12px;
+  width: 12px;
+  border: 2px dotted rgb(224, 225, 174);
+  /* border: 1px solid rgb(0, 0, 0); */
+}
+
+.cursor,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+body:hover .cursor-outline,
+.cursor {
+  opacity: 1;
+}
+.small-page {
+  margin: auto;
+  padding: 25px;
+  transition: color 200ms ease-in;
+}
+.header {
+  display: flex;
+  margin: 100px 0;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  gap: 20px;
+  font-weight: 100;
+  background-color: transparent;
+  text-shadow: 2px 2px rgb(120, 125, 77);
+}
+
+.important {
+  color: rgb(217, 225, 148);
+}
+
+/* .important ::before {
+  content: '';
+  position: absolute;
+
+  width: 400px;
+  height: 100%;
+  background: linear-gradient(rgb(218, 207, 112), rgb(203, 211, 91));
+  animation: spin 4s ease-out infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.important ::after {
+  content: '';
+  position: absolute;
+  background-color: rgb(77, 77, 65);
+
+  inset: 2px;
+} */
+.nav-list ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-list a {
+  background: linear-gradient(to right, rgb(41, 41, 38), rgb(41, 41, 38)),
+    linear-gradient(to right, #edffad, rgb(218, 207, 112), rgb(203, 211, 91));
+  background-size: 100% 0.1em, 0 0.1em;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  transition: 400ms;
+}
+
+.nav-list a:hover,
+a:focus {
+  background-size: 0 0.1em, 100% 0.1em;
+}
+
+.main-flex-container {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  margin: 150px;
+}
+/* .main-flex-container :last-child {
+  overflow-y: auto;
+} */
+
+/* .information {
+  width: 500px;
+  margin-right: 200px;
+  display: block;
+}
+
+.information h1 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.information p {
+  margin: 20px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  word-spacing: 0.125rem;
+  line-height: 25px;
+} */
+
+.emphasis {
+  font-style: italic;
+  margin: 5px;
+  font-weight: 600;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container2 {
+  /* padding: 20px; */
+  width: 600px;
+  max-height: 500px;
+  overflow: auto;
+  background-color: inherit;
+  /* border: 1px solid black; */
+}
+
+.container2 h1 {
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.container2 p {
+  margin: 20px 0px;
+  margin-bottom: 30px;
+  font-size: 16px;
+  word-spacing: 0.125rem;
+  line-height: 25px;
+}
+
+.container2 iframe {
+  margin-bottom: 40px;
+}
+
+#center {
+  text-align: center;
+}
+footer {
+  display: flex;
+  padding: 2.75rem;
+  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(65, 65, 56, 0.1);
+}
+
+@media only screen and (max-width: 1000px) {
+  .nav-list ul {
+    flex-direction: column;
+    transition: 400ms ease;
+  }
+  .main-flex-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .container2 {
+    padding: 20px;
+    margin-bottom: 100px;
+    font-size: 10px;
+  }
+}
+
+.imgHover {
+  position: absolute;
+  top: 0;
+  max-width: 250px;
+  max-height: 250px;
+  z-index: 99;
+}
+
+.imgHover img {
+  width: 100%;
+  box-shadow: 2px 2px 10px black;
+}
