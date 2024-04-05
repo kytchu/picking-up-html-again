@@ -216,7 +216,6 @@ footer {
   }
   .main-flex-container {
     flex-direction: column;
-    text-align: center;
   }
   .container2 {
     padding: 20px;
