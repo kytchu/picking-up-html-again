@@ -203,7 +203,7 @@ a:focus {
 footer {
   display: flex;
   padding: 2.75rem;
-  margin-bottom: 20px;
+  padding-bottom: 10px;
   justify-content: center;
   align-items: center;
   background-color: rgb(65, 65, 56, 0.1);
