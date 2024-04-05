@@ -213,6 +213,7 @@ footer {
   .nav-list ul {
     flex-direction: column;
     transition: 400ms ease;
+    align-items: flex-start;
   }
   .main-flex-container {
     flex-direction: column;
@@ -236,3 +237,4 @@ footer {
   width: 100%;
   box-shadow: 2px 2px 10px black;
 }
+
